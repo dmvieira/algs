@@ -11,12 +11,30 @@ class MergeSort(Sort):
             pivot = int(size/2)
             a = self.sort(sample[:pivot])
             b = self.sort(sample[pivot:])
-            print(a, b)
-            if a > b:
-                return b+a
-            else:
-                return a+b
+            stage = last_a = last_b = 0
+            k = i = j = 0
+            while len(a) > i and len(b) > j:
+                curr_a = a[i]
+                curr_b = b[j]
+            
+                if curr_a < curr_b or len(b) <= j:
+                    sample[k] = curr_a
+                    i += 1
+                else:
+                    sample[k] = curr_b
+                    j += 1
+                k += 1
+            while len(a) > i:
+                sample[k] = a[i]
+                k += 1
+                i += 1
+
+            while len(b) > j:
+                sample[k] = b[j]
+                k += 1
+                j += 1                
                 
+            return sample
 
 
         
