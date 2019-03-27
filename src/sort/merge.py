@@ -24,17 +24,8 @@ class MergeSort(Sort):
                     sample[k] = curr_b
                     j += 1
                 k += 1
-            while len(a) > i:
-                sample[k] = a[i]
-                k += 1
-                i += 1
-
-            while len(b) > j:
-                sample[k] = b[j]
-                k += 1
-                j += 1                
                 
-            return sample
+            return sample[:k] + a[i:] + b[j:]
 
 
         
