@@ -38,8 +38,8 @@ class CommonSearch(object):
     def test_search_list_random(self):
         sample = []
 
-        for i in range(0,100):
-            x = random.randint(1,100)
+        for i in range(0,1000):
+            x = random.randint(1,1000)
             sample.append(x)
             expected = x
         
