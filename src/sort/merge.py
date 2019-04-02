@@ -5,7 +5,7 @@ class MergeSort(Sort):
     def sort(self, sample=None):
         sample = sample or self.sample
         size = len(sample)
-        if size == 1:
+        if size <= 1:
             return sample
         else:
             pivot = int(size/2)

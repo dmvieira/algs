@@ -4,6 +4,18 @@ class CommonSort(object):
 
     sort_alg = None
 
+    def test_sort_one_element(self):
+        sample = [3]
+        expected = [3]
+        alg = self.sort_alg(sample.copy())
+        self.assertEqual(expected, alg.sort())
+
+    def test_sort_empty_list(self):
+        sample = []
+        expected = []
+        alg = self.sort_alg(sample.copy())
+        self.assertEqual(expected, alg.sort())
+
     def test_sort_list(self):
         sample = [3, 4, 7, 8, 2, 1, 5, 6]
         expected = [1, 2, 3, 4, 5, 6, 7, 8]
