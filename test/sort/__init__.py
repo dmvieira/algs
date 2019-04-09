@@ -1,4 +1,5 @@
 import random
+from src.sort import MAX_NUMBER_SIZE
 
 class CommonSort(object):
 
@@ -39,7 +40,7 @@ class CommonSort(object):
         sample = []
 
         for i in range(0,1000):
-            x = random.randint(1,100)
+            x = random.randint(1, MAX_NUMBER_SIZE)
             sample.append(x)
         
         alg = self.sort_alg(sample.copy())
