@@ -23,6 +23,12 @@ class CommonSort(object):
         alg = self.sort_alg(sample.copy())
         self.assertEqual(expected, alg.sort())
 
+    def test_sort_high_numbers_list(self):
+        sample = [35, 42, 78, 81, 29, 10, 53, 68]
+        expected = [10, 29, 35, 42, 53, 68, 78, 81]
+        alg = self.sort_alg(sample.copy())
+        self.assertEqual(expected, alg.sort())
+
     def test_already_sort_list(self):
         sample = [1, 2, 3, 4, 5, 6, 7, 8]
         expected = [1, 2, 3, 4, 5, 6, 7, 8]
