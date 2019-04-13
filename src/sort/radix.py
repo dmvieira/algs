@@ -15,7 +15,6 @@ class RadixSort(Sort):
         while numbers > 0:
             count = CountSort(sample)
             sample = count.sort(count_size+1, exp, 10)
-            print(sample)
             exp *= 10
             numbers -= 1
         return sample
